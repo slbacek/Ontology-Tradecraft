@@ -1,0 +1,12 @@
+# Secrets: never commit (holds your LLM API key)
+.env
+
+# Python cache files (recreated automatically)
+__pycache__/
+*.pyc
+
+# Virtual environment (only if your venv lives inside this folder)
+.venv/
+
+# macOS Finder files (also in the repo-level .gitignore)
+.DS_Store
