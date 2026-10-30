@@ -25,6 +25,8 @@ cco:ont00000080 a owl:Class .
 
 cco:ont00000087 a owl:Class .
 
+cco:ont00000120 a owl:Class .
+
 cco:ont00000124 a owl:Class .
 
 cco:ont00000127 a owl:Class .
@@ -46,8 +48,7 @@ cco:ont00000253 a owl:Class .
 cco:ont00000275 a owl:Class ;
     rdfs:subClassOf cco:ont00000398 .
 
-cco:ont00000293 a owl:Class ;
-    rdfs:subClassOf cco:ont00001163 .
+cco:ont00000293 a owl:Class .
 
 cco:ont00000314 a owl:Class .
 
@@ -58,8 +59,7 @@ cco:ont00000390 a owl:Class .
 cco:ont00000399 a owl:Class ;
     rdfs:subClassOf cco:ont00000686 .
 
-cco:ont00000406 a owl:Class ;
-    rdfs:subClassOf cco:ont00000120 .
+cco:ont00000406 a owl:Class .
 
 cco:ont00000419 a owl:Class .
 
@@ -553,8 +553,6 @@ cco:ont00000003 a owl:Class ;
 
 cco:ont00000067 a owl:Class .
 
-cco:ont00000120 a owl:Class .
-
 cco:ont00000529 a owl:Class .
 
 cco:ont00000649 a owl:Class .
@@ -581,10 +579,10 @@ cco:ont00000686 a owl:Class ;
 cco:ont00002001 a owl:Class ;
     rdfs:subClassOf cco:ont00000958 .
 
-cco:ont00000958 a owl:Class .
-
 cco:ont00001163 a owl:Class ;
     rdfs:subClassOf cco:ont00000853 .
+
+cco:ont00000958 a owl:Class .
 
 cco:ont00000469 a owl:Class .
 

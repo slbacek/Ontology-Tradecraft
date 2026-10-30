@@ -1,4 +1,3 @@
-
 # --- Project 5, Step 4: create the train (~80%) and valid (~20%) ttl files 
 # Input:  src/cco-module.ttl
 # Output: src/train.ttl   the whole module MINUS the held-out 'subClassOf' axioms
@@ -28,77 +27,55 @@ g = rdflib.Graph(); # create the empty graph
 g.parse(TTL_IN, format="turtle") #load the empty graph with the coo module data
 
 # Parse and extract classes + rdfs:subClassOf edges   same as embedding_example.py
-def iri(u):
+def iri(u):  #if U is an IRI return the IRI; if blank return None. 
     return str(u) if isinstance(u, URIRef) else None 
 
 classes = set() #Unique Named Classes
-for s, p, o in g.triples((None, RDF.type, OWL.Class)):  
-    u = iri(s)
+for s, p, o in g.triples((None, RDF.type, OWL.Class)):  #find every triple that matches the ?s rdf:type OWL.class pattern
+    u = iri(s) #only keep the subject is it has an IRI (ignore the none values)
     if u: classes.add(u)
 
 edges = []
-for s, p, o in g.triples((None, RDFS.subClassOf, None)):
-    u, v = iri(s), iri(o)
-    if u and v:
-        classes.add(u); classes.add(v)
-        edges.append((u, v))  #create the edge as a pair
+for s, p, o in g.triples((None, RDFS.subClassOf, None)):  #matches the ?s subclassOf ?o pattern
+    u, v = iri(s), iri(o) #convert both sides - u is the child and v is the parent
+    if u and v:   #only if both are named)
+        classes.add(u); classes.add(v) #add the ends
+        edges.append((u, v))  #store the child,parent as a pair
 
 edges = [(u, v) for (u, v) in edges if u in classes and v in classes] #only edges whose ends are BOTH in classes.
-edges = sorted(set(edges))   #remove duplicates and put in alphabetical order sort so the seed gives the same split every run
+edges = sorted(set(edges))   #remove duplicate edges and put in alphabetical order sort so the seed gives the same split every run
 print(f"Classes: {len(classes):,}  SubClassOf edges: {len(edges):,}")  #print the result set
 
 # Connectivity-preserving split
-#   1st pass  80/20 (train/valid) instead of 80/10/10; no test set in Project 5
-UG_full = nx.Graph(); UG_full.add_nodes_from(classes); UG_full.add_edges_from(edges) #UG - undirected graph
+#   1st pass  80/20 (train/valid); no test set in Project 5
+UG_full = nx.Graph(); UG_full.add_nodes_from(classes); UG_full.add_edges_from(edges) #UG - undirected graph and using networkx
 target_train = int(0.8 * len(edges))
 target_valid = len(edges) - target_train
 
-def can_remove_edge(edge_list, a, b):               # same as embedding_example.py
-    deg = {}
-    for x, y in edge_list:
+def can_remove_edge(edge_list, a, b):               # reuse code from embedding_example.py
+    deg = {} #empty dictionary
+    for x, y in edge_list:  #for each edge add '1' to both ends
         deg[x] = deg.get(x, 0) + 1
         deg[y] = deg.get(y, 0) + 1
-    return deg.get(a,0) > 1 and deg.get(b,0) > 1
+    return deg.get(a,0) > 1 and deg.get(b,0) > 1. #returns true if greater than 1 (both ends have a 1 value)
 
 train_set = set(edges)
-deg_full = dict(UG_full.degree())
-candidates = [(u,v) for (u,v) in edges if deg_full.get(u,0) >= 2 and deg_full.get(v,0) >= 2]
+deg_full = dict(UG_full.degree()) #counts the edges, per class, in the full graph and puts it into a dictionary
+candidates = [(u,v) for (u,v) in edges if deg_full.get(u,0) >= 2 and deg_full.get(v,0) >= 2]  #filter for classes with 2 or more edges
 random.shuffle(candidates)
 
-valid_edges = []
+valid_edges = [] #first pass
 for (u,v) in candidates:
-    if len(valid_edges) < target_valid and (u,v) in train_set:
-        tmp = list(train_set); tmp.remove((u,v))
-        if can_remove_edge(tmp, u, v): train_set.remove((u,v)); valid_edges.append((u,v))
+    if len(valid_edges) < target_valid and (u,v) in train_set: #no more links once the train set is met 
+        tmp = list(train_set); tmp.remove((u,v)) #after removal what is left
+        if can_remove_edge(tmp, u, v): train_set.remove((u,v)); valid_edges.append((u,v)) #any removal can impact the counts for future loops
     if len(valid_edges) >= target_valid:
-        break
-first_pass = len(valid_edges)
-
-# 2nd pass, only if the first pass is short.
-#     Looser rule: both classes keep at least ONE edge in train (still connected).
-def keeps_one_edge(edge_list, a, b):
-    deg = {}
-    for x, y in edge_list:
-        deg[x] = deg.get(x, 0) + 1
-        deg[y] = deg.get(y, 0) + 1
-    return deg.get(a, 0) >= 1 and deg.get(b, 0) >= 1
-
-if len(valid_edges) < target_valid:
-    rest = sorted(train_set)
-    random.shuffle(rest)
-    for (u, v) in rest:
-        if len(valid_edges) >= target_valid:
-            break
-        tmp = list(train_set)
-        tmp.remove((u, v))
-        if keeps_one_edge(tmp, u, v):
-            train_set.remove((u, v))
-            valid_edges.append((u, v))
+        break #stop once the train set percentage is met
 
 train_edges = sorted(train_set)
 valid_edges = sorted(valid_edges)
 print(f"Split sizes: train={len(train_edges)}, valid={len(valid_edges)}")
-print(f"  (first pass {first_pass}, second pass {len(valid_edges) - first_pass})")
+print(f"  (target valid={target_valid}; the connectivity rule allowed {len(valid_edges)})")
 
 # write the split as two Turtle files for MOWL
 

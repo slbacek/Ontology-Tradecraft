@@ -1242,6 +1242,7 @@ cco:ont00000390 a owl:Class ;
 
 cco:ont00000406 a owl:Class ;
     rdfs:label "Measurement Unit of Geocoordinate"@en ;
+    rdfs:subClassOf cco:ont00000120 ;
     skos:definition "A Measurement Unit specifying the geospatial coordinates of a location."@en ;
     cco:ont00001760 "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
 
@@ -1478,13 +1479,6 @@ cco:ont00000077 a owl:Class ;
     skos:definition "A Non-Name Identifier that consists of a string of characters that was created and assigned according to an encoding system such that metadata can be derived from the identifier."@en ;
     cco:ont00001760 "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
 
-cco:ont00000120 a owl:Class ;
-    rdfs:label "Measurement Unit"@en ;
-    rdfs:subClassOf cco:ont00000853 ;
-    skos:definition "A Descriptive Information Content Entity that describes a definite magnitude of a physical quantity, defined and adopted by convention and/or by law, that is used as a standard for measurement of the same physical quantity."@en ;
-    cco:ont00001754 "https://en.wikipedia.org/w/index.php?title=Unit_of_measurement&oldid=1061038125"^^xsd:anyURI ;
-    cco:ont00001760 "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
-
 cco:ont00000127 a owl:Class ;
     rdfs:label "Performance Specification"@en ;
     rdfs:subClassOf [ a owl:Restriction ;
@@ -1620,6 +1614,13 @@ cco:ont00000003 a owl:Class ;
     skos:definition "A Designative Information Content Entity that consists of a string of characters that designates an entity within a specified cultural or social namespace and which is typically a word or phrase in a natural language that has an accepted cultural or social significance."@en ;
     cco:ont00001760 "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
 
+cco:ont00000120 a owl:Class ;
+    rdfs:label "Measurement Unit"@en ;
+    rdfs:subClassOf cco:ont00000853 ;
+    skos:definition "A Descriptive Information Content Entity that describes a definite magnitude of a physical quantity, defined and adopted by convention and/or by law, that is used as a standard for measurement of the same physical quantity."@en ;
+    cco:ont00001754 "https://en.wikipedia.org/w/index.php?title=Unit_of_measurement&oldid=1061038125"^^xsd:anyURI ;
+    cco:ont00001760 "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
 cco:ont00000275 a owl:Class ;
     rdfs:label "Spatial Reference System"@en ;
     skos:altLabel "Coordinate System"@en,
@@ -1632,6 +1633,7 @@ cco:ont00000275 a owl:Class ;
 
 cco:ont00000293 a owl:Class ;
     rdfs:label "Nominal Measurement Information Content Entity"@en ;
+    rdfs:subClassOf cco:ont00001163 ;
     owl:disjointWith cco:ont00001010,
         cco:ont00001022,
         cco:ont00001364 ;
@@ -1882,6 +1884,13 @@ cco:ont00001916 a owl:ObjectProperty ;
     skos:scopeNote "Given a stronger temporal interpretation, this property may be functional. For more info please refer to https://github.com/BFO-ontology/BFO-2020/tree/master/src/owl/temporal%20extensions."@en ;
     cco:ont00001760 "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
 
+cco:ont00001328 a owl:Class ;
+    rdfs:label "Temporal Reference System"@en ;
+    skos:altLabel "Temporal Reference Frame"@en,
+        "Time Scale"@en ;
+    skos:definition "A Reference System that describes a set of standards for measuring time as well as understanding the context of and organizing temporal data."@en ;
+    cco:ont00001760 "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
 cco:ont00001163 a owl:Class ;
     rdfs:label "Measurement Information Content Entity"@en ;
     owl:equivalentClass [ a owl:Class ;
@@ -1890,13 +1899,6 @@ cco:ont00001163 a owl:Class ;
                         owl:someValuesFrom obo:BFO_0000001 ] ) ] ;
     skos:altLabel "Measurement ICE"@en ;
     skos:definition "A Descriptive Information Content Entity that describes the extent, dimensions, quantity, or quality of an Entity relative to some standard."@en ;
-    cco:ont00001760 "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
-
-cco:ont00001328 a owl:Class ;
-    rdfs:label "Temporal Reference System"@en ;
-    skos:altLabel "Temporal Reference Frame"@en,
-        "Time Scale"@en ;
-    skos:definition "A Reference System that describes a set of standards for measuring time as well as understanding the context of and organizing temporal data."@en ;
     cco:ont00001760 "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
 
 cco:ont00000253 a owl:Class ;
