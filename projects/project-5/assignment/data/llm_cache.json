@@ -1,0 +1,187 @@
+{
+  "c203ad04dec2d21841bcc18d917b597ee0cbdde36c6ccc31da9a474eee341550": {
+    "differentia": "consists of a string of characters that designates an entity within a specified cultural or social namespace and that is typically a word or phrase in a natural language having accepted cultural or social significance",
+    "enriched_definition": "A designative name is a designative information content entity that consists of a string of characters that designates an entity within a specified cultural or social namespace and that is typically a word or phrase in a natural language having accepted cultural or social significance.",
+    "genus": "Designative Information Content Entity"
+  },
+  "1181e256c55ea97981dad4cd11c9fe675ad64d8e6e39a712ab4f07e7b3d7f631": {
+    "differentia": "is a measurement of a set of values and is equal to either the middle value or the average of the two values that separate the set into two equally populated upper and lower sets",
+    "enriched_definition": "A median point estimate information content entity is a point estimate information content entity that is a measurement of a set of values and is equal to either the middle value or the average of the two values that separate the set into two equally populated upper and lower sets.",
+    "genus": "point estimate information content entity"
+  },
+  "6757271670b10da8b34ae3e0ef69441ea21c5b19188f2229cebfe05ffac4f5da": {
+    "differentia": "is a statutory time scale that is designated by civil authorities to determine local time(s)",
+    "enriched_definition": "A civil time reference system is a temporal reference system that is a statutory time scale designated by civil authorities to determine local time(s).",
+    "genus": "temporal reference system"
+  },
+  "72064c7739252e8ad3a07e06720922c30b2823f18d66f9941fe7d813e0b1f24c": {
+    "differentia": "designates some temporal interval",
+    "enriched_definition": "A temporal interval identifier is a temporal region identifier that designates some temporal interval.",
+    "genus": "temporal region identifier"
+  },
+  "8221ffcd73b3e59cd4e90da7265e7da0f045e2f91159d05808148518bba29980": {
+    "differentia": "consists of a string of characters that was created and assigned according to an encoding system such that metadata can be derived from the identifier",
+    "enriched_definition": "A code identifier is a non-name identifier that consists of a string of characters that was created and assigned according to an encoding system such that metadata can be derived from the identifier.",
+    "genus": "non-name identifier"
+  },
+  "de4fba25f9143aa504b7c9fc5e340149102f16aeeee515640fababdbd7666639": {
+    "differentia": "designates a temporal instant that is part of some day and is specified using the hours, minutes, and seconds of that day elapsed up to the temporal instant",
+    "enriched_definition": "A standard time of day identifier is a time of day identifier that designates a temporal instant that is part of some day and is specified using the hours, minutes, and seconds of that day elapsed up to the temporal instant.",
+    "genus": "time of day identifier"
+  },
+  "9524d0a4dcc1cebbe894bbc2769cb7bf4ae83bf9228b2eb099b6155ffa1388d8": {
+    "differentia": "designates some day by using an ordinal number to indicate the sequential position of the day within a year",
+    "enriched_definition": "An ordinal date identifier is a decimal date identifier that designates some day by using an ordinal number to indicate the sequential position of the day within a year.",
+    "genus": "decimal date identifier"
+  },
+  "0cff5f57b8c4d159c440f84ad35167cd414efd674e98c50d1d717c7047e82868": {
+    "differentia": "is about a definite magnitude of a physical quantity that is defined and adopted by convention and/or by law and is used as a standard for measurement of the same physical quantity",
+    "enriched_definition": "A measurement unit is a descriptive information content entity that is about a definite magnitude of a physical quantity that is defined and adopted by convention and/or by law and is used as a standard for measurement of the same physical quantity.",
+    "genus": "Descriptive Information Content Entity"
+  },
+  "96c4a9e092469293d37a17ba7337851999b1a1ac2389e1920ca6aebc3b7bb5bd": {
+    "differentia": "is based on the apparent position of the Sun in the sky",
+    "enriched_definition": "A solar time reference system is a temporal reference system that is based on the apparent position of the Sun in the sky.",
+    "genus": "Temporal Reference System"
+  },
+  "2f17a232434c431a47d1e10ee874f213510dfb5007b62fce34f2bde92a91b123": {
+    "differentia": "is about a process participant's behavior under one or more specified operating conditions and prescribes some aspect of that behavior",
+    "enriched_definition": "A performance specification is a prescriptive information content entity that is about some aspect of the behavior of a participant in a process given one or more operating conditions.",
+    "genus": "Prescriptive Information Content Entity"
+  },
+  "c32dce6ea4a35cc3fed90f5e18c1796fdaf61f6a7fdc53df34a37a64ef10e178": {
+    "differentia": "that is designed through deliberate planning and premeditation rather than developed through natural use and repetition over time",
+    "enriched_definition": "A artificial language is a language that is designed through deliberate planning and premeditation rather than developed through natural use and repetition over time.",
+    "genus": "Language"
+  },
+  "6f65e2819f2d2266191d97e065bc4682ecc0e4b4b78c29f428466c41f5874a05": {
+    "differentia": "is about a set of values and is equal to the value or values that occur most often in that set",
+    "enriched_definition": "A mode point estimate information content entity is a point estimate information content entity that is about a set of values and is equal to the value or values that occur most often in that set.",
+    "genus": "Point Estimate Information Content Entity"
+  },
+  "b495a4e8462901e1c17929e950036989762d78a0deea99982c402cb93e0cd8ba": {
+    "differentia": "is an ordinal measurement information content entity that is about some entity in virtue of that entity having the least amount relative to a nominally described set of like entities",
+    "enriched_definition": "A minimum ordinal measurement information content entity is a ordinal measurement information content entity that is about some entity in virtue of that entity having the least amount relative to a nominally described set of like entities.",
+    "genus": "ordinal measurement information content entity"
+  },
+  "1c4c68bf57f8a3153c5a5dd0d4ffcf50b96661b7f87242e54bae3047f7eb2dd9": {
+    "differentia": "is about the ordinal position of a version of a material artifact relative to other forms of that material artifact, where the form differs in some respects from previous or future forms of that material artifact",
+    "enriched_definition": "An artifact version ordinality is an ordinal measurement information content entity that is about the ordinal position of a version of a material artifact relative to other forms of that material artifact, where the form differs in some respects from previous or future forms of that material artifact.",
+    "genus": "Ordinal Measurement Information Content Entity"
+  },
+  "079a374f659ea9bcef7837bcb3f1614f00472c63dae7d4d20898b349a6b5a6e4": {
+    "differentia": "is about a process and designates the current state of that process as one of a set of nominal categories",
+    "enriched_definition": "An event status nominal information content entity is a nominal measurement information content entity that is about a process and designates the current state of that process as one of a set of nominal categories.",
+    "genus": "nominal measurement information content entity"
+  },
+  "c4ef84b2f056021a2f2ee3fb75f822868a43f1d87fcf85f140f05c9760add0ee": {
+    "differentia": "that generically depends on an information content entity",
+    "enriched_definition": "An information bearing entity is an object that generically depends on an information content entity.",
+    "genus": "object"
+  },
+  "a60420c40467eab4f1726434b7b16c49ffe559c6660fb9be51863c2025aafe85": {
+    "differentia": "that is a convention for keeping and displaying the time of day",
+    "enriched_definition": "A clock time system is a temporal reference system that is a convention for keeping and displaying the time of day.",
+    "genus": "temporal reference system"
+  },
+  "eb7b18d5e23b51e96cbccdb10a6b33e303a9ef4d631a7f8d014c3a97c302d86f": {
+    "differentia": "describes a set of standards for uniquely identifying the position of an entity or the direction of a vector within a defined spatial region by means of measurements along one or more coordinate system axes",
+    "enriched_definition": "A spatial reference system is a reference system that describes a set of standards for uniquely identifying the position of an entity or the direction of a vector within a defined spatial region by means of measurements along one or more coordinate system axes.",
+    "genus": "Reference System"
+  },
+  "d4271eebb0e99a1d035d95d4c7d0d6ef867ee4cfb98193f20ea7206f7263edc4": {
+    "differentia": "that is designed to organize and identify dates based on the cycles of an astronomical body's orbit around the Sun",
+    "enriched_definition": "A solar calendar system is a calendar system that is designed to organize and identify dates based on the cycles of an astronomical body's orbit around the Sun.",
+    "genus": "calendar system"
+  },
+  "d6dc1efe66931e9b29aa8ff286475f82adbe36209d52748446625f13e33c24f1": {
+    "differentia": "consists of a symbol that is about a classification of entities according to some shared, possibly arbitrary, characteristic",
+    "enriched_definition": "A nominal measurement information content entity is a measurement information content entity that consists of a symbol that is about a classification of entities according to some shared, possibly arbitrary, characteristic.",
+    "genus": "Measurement Information Content Entity"
+  },
+  "1028a34723d32c74433223a4dcba5f260647b9331bd6ff1687751710fa3e2d74": {
+    "differentia": "that is concretized by some information content entity",
+    "enriched_definition": "An information quality entity is a quality that is concretized by some information content entity.",
+    "genus": "quality"
+  },
+  "2a8c25a02ce1216c24f4a95a62f9aaf73b6196496f17b856273a10410c9d692b": {
+    "differentia": "is about a relative importance of an entity",
+    "enriched_definition": "A priority measurement information content entity is a ordinal measurement information content entity that is about a relative importance of an entity.",
+    "genus": "Ordinal Measurement Information Content Entity"
+  },
+  "a6fa3635a99057ba34c521275e4d7b0ec1e6c499e16854e2db95ff01674bb416": {
+    "differentia": "designates some spatial region",
+    "enriched_definition": "A spatial region identifier is a designative information content entity that designates some spatial region.",
+    "genus": "designative information content entity"
+  },
+  "28785a044a59c306f145eb4589a87e9837fe4839d4f303672a198cfe9d38441e": {
+    "differentia": "is about a set of standards for organizing and understanding data of a specified type or domain",
+    "enriched_definition": "A reference system is a descriptive information content entity that is about a set of standards for organizing and understanding data of a specified type or domain.",
+    "genus": "Descriptive Information Content Entity"
+  },
+  "8ea6c33155bf2dae098d4698f9448fef7ce60d9dc38a2f1a3db155c35c7866b7": {
+    "differentia": "designates some temporal region",
+    "enriched_definition": "A temporal region identifier is a designative information content entity that designates some temporal region.",
+    "genus": "designative information content entity"
+  },
+  "c4867dbbd3bb69e39bc95b33bffc0b125fdb8f666d3dfe97c79d1a91ce9cfdda": {
+    "differentia": "that is used to express the value of a geocoordinate measurement, a geospatial coordinate that is about a location",
+    "enriched_definition": "A measurement unit of geocoordinate is a measurement unit that is used to express the value of a geospatial coordinate that is about a location.",
+    "genus": "Measurement Unit"
+  },
+  "8b4bd78b099e1cd93040a2f6db0f26a4782a5f5971997c0faad20590732b1424": {
+    "differentia": "designates a type of part whose instances are designed to be part of some material artifact",
+    "enriched_definition": "A part number is a code identifier that designates a type of part whose instances are designed to be part of some material artifact.",
+    "genus": "code identifier"
+  },
+  "d295be3dbb0664f3d392294e0e7c9ee74983a95eaa0788a0469cb30f40e03aa8": {
+    "differentia": "is used to determine and identify the location of a point or object at or near the surface of the Earth",
+    "enriched_definition": "A geospatial coordinate reference system is a spatial reference system that is used to determine and identify the location of a point or object at or near the surface of the Earth.",
+    "genus": "spatial reference system"
+  },
+  "276d5a1020f8ae6093e1556f57329cd279c835da967557040ea0b7fe5ef3be1b": {
+    "differentia": "that is developed and evolves through use and repetition rather than through conscious planning or premeditation",
+    "enriched_definition": "A natural language is a language that is developed and evolves through use and repetition rather than through conscious planning or premeditation.",
+    "genus": "Language"
+  },
+  "9f636c89574975fc9f1aa72e89997d492243a7024e60b22cb50af39acfdec9e2": {
+    "differentia": "designates some day",
+    "enriched_definition": "A date identifier is a temporal interval identifier that designates some day.",
+    "genus": "temporal interval identifier"
+  },
+  "75bd172619d16ef2de5b3fbce4559b243e21f7421dbb64529333a7401d763f1f": {
+    "differentia": "is about a measurement of the number of members of some aggregate",
+    "enriched_definition": "A count measurement information content entity is a ratio measurement information content entity that is about a measurement of the number of members of some aggregate.",
+    "genus": "ratio measurement information content entity"
+  },
+  "7b7bef83a035d52bb9c840825b2c051fba534e522927d1a0643bdc87f9fa2197": {
+    "differentia": "designates some temporal instant",
+    "enriched_definition": "A temporal instant identifier is a temporal region identifier that designates some temporal instant.",
+    "genus": "temporal region identifier"
+  },
+  "1e67a3aff60f0f8e9cddf04274a66ce470fa414fc374d6e60ca630aefc3c00eb": {
+    "differentia": "designates an approximate temporal instant that is part of some julian day",
+    "enriched_definition": "A julian date fraction is a decimal time of day identifier that designates an approximate temporal instant that is part of some julian day.",
+    "genus": "decimal time of day identifier"
+  },
+  "4e46543c6e1118b0028a3697b7096974373b796c6e5779b3c20f50d1380803e5": {
+    "differentia": "is about the extent to which a description conforms to the reality it describes",
+    "enriched_definition": "A veracity measurement information content entity is a measurement information content entity that is about the extent to which a description conforms to the reality it describes.",
+    "genus": "Measurement Information Content Entity"
+  },
+  "92005248e234cbda79e7308a7d6b4bdbdec39b5a4f35e425b079731dc48f21ab": {
+    "differentia": "is about some entity and designates that entity as having the greatest amount of a measured quantity relative to a set of like entities described nominally",
+    "enriched_definition": "A maximum ordinal measurement information content entity is an ordinal measurement information content entity that is about some entity and designates that entity as having the greatest amount of a measured quantity relative to a nominally described set of like entities.",
+    "genus": "ordinal measurement information content entity"
+  },
+  "926f0669c87017fbc89ac88b6e8b5e507539c775d551ec75d48a8d308a7a86e3": {
+    "differentia": "is about a Proper Name and is a shortened form of that Proper Name",
+    "enriched_definition": "A abbreviated name is a designative name that is about a proper name and is a shortened form of that proper name.",
+    "genus": "designative name"
+  },
+  "9bc510f9688b5d7b27394055e07beeb52a2f4ea3282ec5c416a37d5c57c4da57": {
+    "differentia": "is about an uncertain future event",
+    "enriched_definition": "A predictive information content entity is a descriptive information content entity that is about an uncertain future event.",
+    "genus": "descriptive information content entity"
+  }
+}

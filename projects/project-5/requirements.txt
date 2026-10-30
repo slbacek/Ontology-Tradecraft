@@ -6,3 +6,4 @@ rdflib==7.0.0
 pandas==2.2.2
 python-dotenv
 perplexityai
+networkx #to support the ability to hold out a class with at least two edges.  
