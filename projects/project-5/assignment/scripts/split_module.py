@@ -5,7 +5,7 @@
 #
 # Sections 2 and 3 reuse documentation/embedding_example.py
 # (connectivity-preserving split). Lines marked "CHANGED" differ from it.
-#'
+#
 #   python scripts/split_module.py
 
 import random, rdflib, networkx as nx
@@ -14,15 +14,13 @@ from rdflib import URIRef
 from rdflib.namespace import RDF, RDFS, OWL
 
 random.seed(42)                                     # same as embedding_example.py
-#random.seed(42); np.random.seed(42)
-
 
 BASE = Path(__file__).resolve().parent.parent       # the assignment folder
 TTL_IN = BASE / "src" / "cco-module.ttl"
 TRAIN_OUT = BASE / "src" / "train.ttl"
 VALID_OUT = BASE / "src" / "valid.ttl"
 
-# Load cco-module - use my local file
+# Load cco-module 
 g = rdflib.Graph(); # create the empty graph
 g.parse(TTL_IN, format="turtle") #load the empty graph with the coo module data
 
@@ -57,7 +55,7 @@ def can_remove_edge(edge_list, a, b):               # reuse code from embedding_
     for x, y in edge_list:  #for each edge add '1' to both ends
         deg[x] = deg.get(x, 0) + 1
         deg[y] = deg.get(y, 0) + 1
-    return deg.get(a,0) > 1 and deg.get(b,0) > 1. #returns true if greater than 1 (both ends have a 1 value)
+    return deg.get(a,0) > 1 and deg.get(b,0) > 1 #returns true if greater than 1 (both ends still have at least 2 edges after removal)
 
 train_set = set(edges)
 deg_full = dict(UG_full.degree()) #counts the edges, per class, in the full graph and puts it into a dictionary
@@ -70,7 +68,7 @@ for (u,v) in candidates:
         tmp = list(train_set); tmp.remove((u,v)) #after removal what is left
         if can_remove_edge(tmp, u, v): train_set.remove((u,v)); valid_edges.append((u,v)) #any removal can impact the counts for future loops
     if len(valid_edges) >= target_valid:
-        break #stop once the train set percentage is met
+        break #stop once the train set percentage is met (target)
 
 train_edges = sorted(train_set)
 valid_edges = sorted(valid_edges)
@@ -112,7 +110,7 @@ for (u, v) in valid_edges:
 train_g.serialize(TRAIN_OUT, format="turtle")
 valid_g.serialize(VALID_OUT, format="turtle")
 
-#  simple checks to show in your PR
+
 
 #  No held-out edge may still be in train
 overlap = 0
